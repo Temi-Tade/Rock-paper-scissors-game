@@ -2,17 +2,23 @@
 	 padding: 0;
 	 margin: 0;
 	 box-sizing: border-box;
-	 transition: .5s
+	 transition: .5s ease-in-out;
+	 letter-spacing: .03125rem
 }
 
 :root{
-	--theme: #EEE;
-	--text: #222;
+	--light: #EEE;
+	--dark: #222;
+	--theme: #2E79D8;
+	--b_radius: .5rem;
+	--font_size_sm: .75rem;
+	--font_size_med: 1rem;
+	--font_size_lg: 1.25rem
 }
 
 html{
-	background: var(--theme);
-	color: var(--text);
+	background: var(--light);
+	color: var(--dark);
 }
 
 header{
@@ -55,4 +61,56 @@ header{
 	height: 7rem;
 	width: 20rem;
 	margin: auto;
+}
+
+#modal-bg{
+	background: #3337;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	backdrop-filter: blur(.25rem);
+	padding-top: 15rem
+}
+
+#modal{
+	background: var(--light);
+	width: 80%;
+	padding: 1rem;
+	border-radius: var(--b_radius);
+	margin: auto;
+}
+
+#modal-info{
+	font-size: var(--font_size_med);
+}
+
+.mode-wrap{
+	margin: 1rem auto;
+	border-radius: var(--b_radius);
+}
+
+.mode-wrap label{
+	display: block;
+	width: 100%;
+}
+
+.mode-wrap span{
+	display: block;
+	padding: 1rem;
+	font-weight: bolder;
+	font-size: var(--font_size_lg);
+	border-radius: var(--b_radius);
+	text-align: center;
+}
+
+.mode-wrap input{
+	display: none;
+}
+
+.mode-wrap input:checked + span{
+	color: var(--theme);
+	font-size: 1.5rem;
+	border: .25rem double var(--theme);
 }
