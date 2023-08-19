@@ -6,6 +6,10 @@
 	 letter-spacing: .03125rem
 }
 
+*:focus{
+	outline: 0;
+}
+
 :root{
 	--light: #EEE;
 	--dark: #222;
@@ -71,7 +75,7 @@ header{
 	right: 0;
 	bottom: 0;
 	backdrop-filter: blur(.25rem);
-	padding-top: 15rem
+	padding-top: 12rem
 }
 
 #modal{
@@ -113,4 +117,38 @@ header{
 	color: var(--theme);
 	font-size: 1.5rem;
 	border: .25rem double var(--theme);
+}
+
+#modal-action{
+	margin: .25rem 0;
+}
+
+#modal button{
+	background: var(--theme);
+	color: var(--light);
+	padding: 1rem;
+	font-size: var(--font_size_lg);
+	font-weight: bolder
+}
+
+#modal-action button{
+	width: 100%
+}
+
+button{
+	border: 0;
+	border-radius: var(--b_radius)
+}
+
+#modal input[type=text]{
+	width: 60%;
+	padding: 1rem;
+	border-radius: var(--b_radius);
+	border: 1.5px solid var(--theme);
+	font-size: var(--font_size_lg);
+}
+
+#modal h2{
+	margin: 1rem 0;
+	text-align: center
 }
